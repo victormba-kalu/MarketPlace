@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketplace | Connect & Grow</title>
+    <script type="module" crossorigin src="/assets/index-DnqqMY38.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D2tixNve.css">
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 min-h-screen"
+  >
+    <!-- Navigation Bar -->
+    <nav
+      class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-5">
+        <div class="flex items-center justify-between">
+          <!-- Logo - I will finish this up later to match with the logo I designed during project planning -->
+          <div class="flex items-center gap-3">
+            <div
+              class="w-9 h-9 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl"
+            >
+              M
+            </div>
+            <h1 class="text-2xl font-bold tracking-tight">Marketplace</h1>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a
+              href="#"
+              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+              >Browse Services</a
+            >
+            <a
+              href="#"
+              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+              >For Business Owners</a
+            >
+            <a
+              href="#"
+              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+              >For Providers</a
+            >
+          </div>
+
+          <!-- Right Side -->
+          <div class="flex items-center gap-4">
+            <button
+              id="theme-toggle"
+              class="w-10 h-10 flex items-center justify-center rounded-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-xl cursor-pointer"
+            >
+              🌙
+            </button>
+
+            <button
+              class="hidden md:block px-6 py-2.5 text-sm font-medium border border-gray-300 dark:border-gray-700 rounded-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+            >
+              Login
+            </button>
+
+            <button
+              class="px-6 py-2.5 text-sm font-medium bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl transition-colors cursor-pointer"
+            >
+              Sign Up
+            </button>
+
+            <button
+              id="mobile-menu-btn"
+              class="md:hidden w-10 h-10 flex items-center justify-center text-2xl cursor-pointer"
+            >
+              ☰
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700"
+        >
+          <div class="flex flex-col gap-4 text-sm font-medium">
+            <a
+              href="#"
+              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors py-2 cursor-pointer"
+              >Browse Services</a
+            >
+            <a
+              href="#"
+              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors py-2 cursor-pointer"
+              >For Business Owners</a
+            >
+            <a
+              href="#"
+              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors py-2 cursor-pointer"
+              >For Providers</a
+            >
+            <a
+              href="#"
+              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors py-2 cursor-pointer"
+              >Login</a
+            >
+            <a
+              href="#"
+              class="block bg-emerald-600 hover:bg-emerald-700 text-white text-center py-3 rounded-2xl font-medium mt-2 cursor-pointer"
+              >Sign Up</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-br from-emerald-600 via-emerald-700 to-indigo-700 text-white py-24"
+    >
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+          Find the Right Expert<br />to Grow Your Business
+        </h1>
+        <p class="text-xl text-emerald-100 max-w-2xl mx-auto mb-10">
+          Connecting small business owners with talented service professionals
+          who truly understand your needs.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            class="bg-white text-emerald-700 px-10 py-4 rounded-3xl font-semibold text-lg hover:shadow-xl transition-all cursor-pointer"
+          >
+            I Need Help Growing
+          </button>
+          <button
+            class="border-2 border-white/80 hover:border-white px-10 py-4 rounded-3xl font-semibold text-lg transition-all cursor-pointer"
+          >
+            I Offer Services
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Providers Section -->
+    <section class="py-16 bg-white dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2
+          class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white"
+        >
+          Featured Service Providers
+        </h2>
+        <div id="featured-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-8 h-8 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-bold"
+              >
+                M
+              </div>
+              <span class="text-white text-2xl font-bold">Marketplace</span>
+            </div>
+            <p class="text-sm">
+              Connecting small businesses with the right talent to help them
+              grow.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-white font-semibold mb-4">For Business Owners</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors cursor-pointer"
+                  >Browse Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors cursor-pointer"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors cursor-pointer"
+                  >Success Stories</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-white font-semibold mb-4">For Service Providers</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors cursor-pointer"
+                  >Join as Expert</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors cursor-pointer"
+                  >Success Tips</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors cursor-pointer"
+                  >Pricing</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-white font-semibold mb-4">Company</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors cursor-pointer"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors cursor-pointer"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors cursor-pointer"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm">
+          © 2026 Marketplace. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
