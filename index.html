@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marketplace | Connect & Grow</title>
-    <script type="module" crossorigin src="/MarketPlace/assets/index-DnqqMY38.js"></script>
-    <link rel="stylesheet" crossorigin href="/MarketPlace/assets/index-D2tixNve.css">
+    <script type="module" crossorigin src="/assets/index-BkGaaYPs.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-iNJD1s0B.css">
   </head>
   <body
     class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 min-h-screen"
@@ -45,7 +45,6 @@
             >
           </div>
 
-          <!-- Right Side -->
           <div class="flex items-center gap-4">
             <button
               id="theme-toggle"
@@ -148,6 +147,108 @@
         </h2>
         <div id="featured-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+    <!-- Browse Providers Section -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-950">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row gap-6 mb-10">
+          <div class="flex-1">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white">
+              Browse Service Providers
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">
+              Find the perfect expert for your business needs
+            </p>
+          </div>
+
+          <!-- Search -->
+          <div class="flex-1">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search by name, role, or skill..."
+              class="w-full px-6 py-4 rounded-3xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:border-emerald-500"
+            />
+          </div>
+        </div>
+
+        <!-- Filters + Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <!-- Filters Sidebar -->
+          <div class="lg:col-span-1">
+            <div
+              class="bg-white dark:bg-gray-800 rounded-3xl p-6 sticky top-24"
+            >
+              <h3 class="font-semibold mb-6">Filters</h3>
+
+              <!-- Category -->
+              <div class="mb-8">
+                <p class="text-sm font-medium mb-2">Category</p>
+                <select
+                  id="category-filter"
+                  class="w-full p-3 rounded-2xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:border-emerald-500"
+                >
+                  <option value="">All Services</option>
+                  <option value="design">UI/UX Design</option>
+                  <option value="marketing">Digital Marketing</option>
+                  <option value="development">Web Development</option>
+                </select>
+              </div>
+
+              <!-- Price Range -->
+              <div class="mb-8">
+                <div class="flex justify-between items-center mb-2">
+                  <p class="text-sm font-medium">Max Price</p>
+                  <span
+                    id="price-value"
+                    class="text-emerald-600 dark:text-emerald-400 font-semibold"
+                    >$100</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="price-filter"
+                  min="50"
+                  max="100"
+                  value="100"
+                  step="5"
+                  class="w-full accent-emerald-600"
+                />
+              </div>
+
+              <!-- Minimum Rating -->
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <p class="text-sm font-medium">Minimum Rating</p>
+                  <span
+                    id="rating-value"
+                    class="text-emerald-600 dark:text-emerald-400 font-semibold"
+                    >4.0 ★</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="rating-filter"
+                  min="3.5"
+                  max="5"
+                  value="3.5"
+                  step="0.1"
+                  class="w-full accent-emerald-600"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Providers Grid -->
+          <div class="lg:col-span-3">
+            <div
+              id="browse-grid"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              <!-- Dynamic cards loaded by JavaScript -->
+            </div>
+          </div>
         </div>
       </div>
     </section>
