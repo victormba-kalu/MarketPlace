@@ -1,3 +1,5 @@
+// src/js/modules/theme.js - Dark / Light Mode Toggle
+
 document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('theme-toggle');
 
@@ -14,4 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
       ? '☀️'
       : '🌙';
   });
+
+  // Load saved theme preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.classList.add('dark');
+    themeToggle.textContent = '☀️';
+  }
 });
