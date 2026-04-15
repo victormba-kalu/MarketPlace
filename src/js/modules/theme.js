@@ -1,5 +1,3 @@
-// src/js/modules/theme.js - Dark / Light Mode Toggle
-
 document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('theme-toggle');
 

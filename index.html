@@ -175,17 +175,20 @@
 
         <!-- Filters + Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          
           <!-- Filters Sidebar -->
           <div class="lg:col-span-1">
-            <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 sticky top-24">
+            <div
+              class="bg-white dark:bg-gray-800 rounded-3xl p-6 sticky top-24"
+            >
               <h3 class="font-semibold mb-6">Filters</h3>
-              
+
               <!-- Category -->
               <div class="mb-8">
                 <p class="text-sm font-medium mb-2">Category</p>
-                <select id="category-filter" 
-                        class="w-full p-3 rounded-2xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:border-emerald-500">
+                <select
+                  id="category-filter"
+                  class="w-full p-3 rounded-2xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:border-emerald-500"
+                >
                   <option value="">All Services</option>
                   <option value="design">UI/UX Design</option>
                   <option value="marketing">Digital Marketing</option>
@@ -197,24 +200,51 @@
               <div class="mb-8">
                 <div class="flex justify-between items-center mb-2">
                   <p class="text-sm font-medium">Max Price</p>
-                  <span id="price-value" class="text-emerald-600 dark:text-emerald-400 font-semibold">$100</span>
+                  <span
+                    id="price-value"
+                    class="text-emerald-600 dark:text-emerald-400 font-semibold"
+                    >$100</span
+                  >
                 </div>
-                <input type="range" id="price-filter" min="50" max="100" value="100" step="5" class="w-full accent-emerald-600">
+                <input
+                  type="range"
+                  id="price-filter"
+                  min="50"
+                  max="100"
+                  value="100"
+                  step="5"
+                  class="w-full accent-emerald-600"
+                />
               </div>
 
               <!-- Minimum Rating -->
               <div>
                 <div class="flex justify-between items-center mb-2">
                   <p class="text-sm font-medium">Minimum Rating</p>
-                  <span id="rating-value" class="text-emerald-600 dark:text-emerald-400 font-semibold">4.0 ★</span>
+                  <span
+                    id="rating-value"
+                    class="text-emerald-600 dark:text-emerald-400 font-semibold"
+                    >4.0 ★</span
+                  >
                 </div>
-                <input type="range" id="rating-filter" min="3.5" max="5" value="3.5" step="0.1" class="w-full accent-emerald-600">
+                <input
+                  type="range"
+                  id="rating-filter"
+                  min="3.5"
+                  max="5"
+                  value="3.5"
+                  step="0.1"
+                  class="w-full accent-emerald-600"
+                />
               </div>
             </div>
           </div>
           <!-- Providers Grid -->
           <div class="lg:col-span-3">
-            <div id="browse-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              id="browse-grid"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
               <!-- Dynamic cards loaded by JavaScript -->
             </div>
           </div>

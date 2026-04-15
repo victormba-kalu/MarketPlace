@@ -78,7 +78,6 @@ export function renderBrowseProviders(providers) {
   });
 }
 
-
 export function addViewAllButton() {
   const browseSection = document.querySelector('#browse-grid')?.parentElement;
   if (!browseSection) return;

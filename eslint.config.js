@@ -21,10 +21,11 @@ export default [
       'prettier/prettier': 'error',
       'no-console': 'warn',
       'no-unused-vars': 'warn',
+      'no-undef': 'error',
       quotes: ['error', 'single', { allowTemplateLiterals: true }],
       semi: ['error', 'always'],
     },
 
-    ignores: ['dist/**', 'node_modules/**'],
+    ignores: ['dist/**', 'node_modules/**', '*.min.js'],
   },
 ];
