@@ -3,24 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marketplace | Connect & Grow</title>
-    <script type="module" crossorigin src="/MarketPlace/assets/index-BPr2eAlj.js"></script>
-    <link rel="stylesheet" crossorigin href="/MarketPlace/assets/index-iNJD1s0B.css">
+    <title>MarketPlace | Connect & Grow</title>
+    <script type="module" crossorigin src="/MarketPlace/assets/index-B5N7JuPZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/MarketPlace/assets/index-C_dsKATd.css">
   </head>
   <body
     class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 min-h-screen"
   >
-    <!-- Navigation Bar -->
-    <nav
-      class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50"
+    <!-- Loading Spinner -->
+    <div
+      id="loading-spinner"
+      class="fixed inset-0 bg-white/80 dark:bg-gray-950/80 flex items-center justify-center z-50 hidden"
     >
+      <div class="flex flex-col items-center">
+        <div
+          class="w-12 h-12 border-4 border-emerald-200 dark:border-gray-700 border-t-emerald-600 rounded-full animate-spin"
+        ></div>
+        <p class="mt-4 text-gray-600 dark:text-gray-400 text-sm font-medium">
+          Loading providers...
+        </p>
+      </div>
+    </div>
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <nav class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-6 py-5">
         <div class="flex items-center justify-between">
-          <!-- Logo - I will finish this up later to match with the logo I designed during project planning -->
+          <!-- Logo -->
           <div class="flex items-center gap-3">
-            <div
-              class="w-9 h-9 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl"
-            >
+            <div class="w-9 h-9 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">
               M
             </div>
             <h1 class="text-2xl font-bold tracking-tight">Marketplace</h1>
@@ -28,115 +39,99 @@
 
           <!-- Desktop Menu -->
           <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-            <a
-              href="#"
-              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-              >Browse Services</a
-            >
-            <a
-              href="#"
-              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-              >For Business Owners</a
-            >
-            <a
-              href="#"
-              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-              >For Providers</a
-            >
+            <a href="#browse-grid" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Browse Services</a>
+            <a href="#featured-grid" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">For Business Owners</a>
+            <a href="#browse-grid" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">For Providers</a>
           </div>
 
+          <!-- Right side buttons -->
           <div class="flex items-center gap-4">
-            <button
-              id="theme-toggle"
-              class="w-10 h-10 flex items-center justify-center rounded-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-xl cursor-pointer"
-            >
+            <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-xl cursor-pointer">
               🌙
             </button>
 
-            <button
-              class="hidden md:block px-6 py-2.5 text-sm font-medium border border-gray-300 dark:border-gray-700 rounded-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
-            >
+            <button id="login-btn" 
+                    class="hidden md:block px-6 py-2.5 text-sm font-medium border border-gray-300 dark:border-gray-700 rounded-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer">
               Login
             </button>
 
-            <button
-              class="px-6 py-2.5 text-sm font-medium bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl transition-colors cursor-pointer"
-            >
+            <button id="signup-btn" 
+                    class="px-6 py-2.5 text-sm font-medium bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl transition-colors cursor-pointer">
               Sign Up
             </button>
 
-            <button
-              id="mobile-menu-btn"
-              class="md:hidden w-10 h-10 flex items-center justify-center text-2xl cursor-pointer"
-            >
+            <button id="mobile-menu-btn" 
+                    class="md:hidden w-10 h-10 flex items-center justify-center text-2xl cursor-pointer">
               ☰
             </button>
           </div>
         </div>
 
-        <!-- Mobile Menu -->
-        <div
-          id="mobile-menu"
-          class="hidden md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700"
-        >
-          <div class="flex flex-col gap-4 text-sm font-medium">
-            <a
-              href="#"
-              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors py-2 cursor-pointer"
-              >Browse Services</a
-            >
-            <a
-              href="#"
-              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors py-2 cursor-pointer"
-              >For Business Owners</a
-            >
-            <a
-              href="#"
-              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors py-2 cursor-pointer"
-              >For Providers</a
-            >
-            <a
-              href="#"
-              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors py-2 cursor-pointer"
-              >Login</a
-            >
-            <a
-              href="#"
-              class="block bg-emerald-600 hover:bg-emerald-700 text-white text-center py-3 rounded-2xl font-medium mt-2 cursor-pointer"
-              >Sign Up</a
-            >
+        <!-- Mobile Menu - Clean & Fixed -->
+        <div id="mobile-menu" class="hidden md:hidden mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+          <div class="flex flex-col gap-5 text-sm font-medium">
+            <a href="#browse-grid" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors py-2">Browse Services</a>
+            <a href="#featured-grid" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors py-2">For Business Owners</a>
+            <a href="#browse-grid" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors py-2">For Providers</a>
+
+            <div class="pt-6 border-t border-gray-200 dark:border-gray-700 flex flex-col gap-3">
+              <button id="mobile-login-btn"
+                      class="py-3.5 border border-gray-300 dark:border-gray-700 rounded-2xl font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                Login
+              </button>
+              <button id="mobile-signup-btn"
+                      class="py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-medium transition-colors">
+                Sign Up
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section
-      class="bg-gradient-to-br from-emerald-600 via-emerald-700 to-indigo-700 text-white py-24"
-    >
-      <div class="max-w-5xl mx-auto px-6 text-center">
-        <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-          Find the Right Expert<br />to Grow Your Business
-        </h1>
-        <p class="text-xl text-emerald-100 max-w-2xl mx-auto mb-10">
-          Connecting small business owners with talented service professionals
-          who truly understand your needs.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <button
-            class="bg-white text-emerald-700 px-10 py-4 rounded-3xl font-semibold text-lg hover:shadow-xl transition-all cursor-pointer"
-          >
-            I Need Help Growing
-          </button>
-          <button
-            class="border-2 border-white/80 hover:border-white px-10 py-4 rounded-3xl font-semibold text-lg transition-all cursor-pointer"
-          >
-            I Offer Services
-          </button>
+    <section class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-950 to-black flex items-center relative overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-24 left-12 text-7xl opacity-10">💼</div>
+        <div class="absolute top-40 right-20 text-6xl opacity-10">🛠️</div>
+        <div class="absolute bottom-32 left-1/4 text-7xl opacity-10">📈</div>
+        <div class="absolute bottom-40 right-1/3 text-6xl opacity-10">👨‍💼</div>
+        <div class="absolute top-1/3 left-2/3 text-5xl opacity-10">✨</div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="max-w-3xl">
+          <h1 class="text-6xl md:text-7xl font-bold leading-[1.05] tracking-tighter text-white mb-6">
+            Find the right<br>
+            <span class="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-300 bg-clip-text text-transparent">
+              Expert
+            </span><br>
+            to grow your<br>
+            <span class="bg-gradient-to-r from-amber-300 via-yellow-200 to-white bg-clip-text text-transparent">
+              Business
+            </span>
+          </h1>
+
+          <p class="text-2xl text-gray-300 mb-12 max-w-lg leading-relaxed">
+            Connecting small business owners with talented professionals who truly understand your needs.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#browse-grid" 
+              class="px-10 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-3xl text-lg transition-all">
+              Browse Experts
+            </a>
+            <button 
+              class="px-10 py-4 border-2 border-white/70 hover:border-white text-white font-semibold rounded-3xl text-lg transition-all">
+              Learn How It Works
+            </button>
+          </div>
         </div>
       </div>
-    </section>
 
+      <!-- Soft bottom fade to blend with next section -->
+      <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-gray-50 dark:from-gray-900 to-transparent"></div>
+    </section>
     <!-- Featured Providers Section -->
     <section class="py-16 bg-white dark:bg-gray-900">
       <div class="max-w-7xl mx-auto px-6">
