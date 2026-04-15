@@ -3,5 +3,6 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [tailwindcss()],
-  darkMode: 'class', // ← This line enables dark mode
+  base: '/MarketPlace/', // ← This is the most important line
+  darkMode: 'class',
 });

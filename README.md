@@ -19,4 +19,3 @@ A modern web platform connecting small business owners (chefs, bakers, caterers,
 - **Two Third-Party APIs**:
   - RandomUser.me – for realistic provider data and images
   - JSONPlaceholder – for fake client reviews
-

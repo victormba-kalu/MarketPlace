@@ -13,4 +13,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   initFilters();
+  // Login and Signup buttons
+  const loginBtn = document.getElementById('login-btn');
+  const signupBtn = document.getElementById('signup-btn');
+
+  if (loginBtn) {
+    loginBtn.addEventListener('click', () => {
+      alert(
+        '👋 Login feature coming soon!\n\nIn a full version, this would open a login form.'
+      );
+    });
+  }
+
+  if (signupBtn) {
+    signupBtn.addEventListener('click', () => {
+      alert(
+        '🚀 Sign Up feature coming soon!\n\nThis would allow business owners or service providers to create an account.'
+      );
+    });
+  }
 });

@@ -1,6 +1,9 @@
 let allProviders = [];
 
 export async function fetchProviders() {
+  const spinner = document.getElementById('loading-spinner');
+  if (spinner) spinner.classList.remove('hidden');
+
   try {
     const res = await fetch('https://randomuser.me/api/?results=12');
     const data = await res.json();
@@ -28,14 +31,15 @@ export async function fetchProviders() {
     const ui = await import('./ui.js');
     ui.renderFeaturedProviders(allProviders.slice(0, 3));
     ui.renderBrowseProviders(allProviders);
-
-    console.log('✅ Providers rendered successfully');
-  } catch (error) {
-    console.error('Failed to fetch providers:', error);
+  } catch {
+    //console.error('Failed to fetch providers:', error);
+  } finally {
+    // Hides the spinner when done
+    if (spinner) spinner.classList.add('hidden');
   }
 }
 
-// Second API: JSONPlaceholder for reviews
+// Second API
 async function fetchReviews() {
   try {
     const res = await fetch(
@@ -52,10 +56,8 @@ async function fetchReviews() {
           author: 'Happy Client',
         }));
     });
-
-    console.log('✅ Second API (reviews) loaded successfully');
-  } catch (error) {
-    console.error('Failed to fetch reviews:', error);
+  } catch {
+    //console.error('Failed to fetch reviews:', error);
   }
 }
 

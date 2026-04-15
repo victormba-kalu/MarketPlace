@@ -13,7 +13,6 @@ export class ProviderCard {
       border border-gray-100 dark:border-gray-700
     `;
 
-    // Using picsum.photos for better quality images
     const imageId =
       this.provider.imageId || Math.floor(Math.random() * 100) + 60;
 
